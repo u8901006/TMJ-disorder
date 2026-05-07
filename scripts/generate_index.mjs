@@ -10,7 +10,8 @@ const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"];
 function getDateDisplay(filename) {
   const match = filename.match(/tmj-(\d{4}-\d{2}-\d{2})\.html/);
   if (!match) return null;
-  const [_, y, m, d] = match[1].split("-").map(Number);
+  const parts = match[1].split("-").map(Number);
+  const y = parts[0], m = parts[1], d = parts[2];
   const date = new Date(y, m - 1, d);
   const weekday = WEEKDAYS[date.getDay()];
   return { dateStr: match[1], display: `${y}年${m}月${d}日（週${weekday}）` };
