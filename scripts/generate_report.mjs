@@ -6,9 +6,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DOCS = resolve(ROOT, "docs");
 
-const API_BASE = process.env.ZHIPU_API_BASE ?? "https://open.bigmodel.cn/api/coding/paas/v4";
-const MODELS = ["glm-5-turbo", "glm-4.7"];
-const MAX_TOKENS = 50_000;
+const API_BASE = "https://integrate.api.nvidia.com/v1";
+const MODELS = ["nvidia/nemotron-3-super-120b-a12b", "nvidia/nemotron-3-nano-30b-a3b"];
+const MAX_TOKENS = 16384;
 const TIMEOUT_MS = 480_000;
 const MAX_RETRIES = 3;
 
@@ -108,7 +108,7 @@ function robustJsonParse(text) {
   return null;
 }
 
-async function callGlmApi(apiKey, payload) {
+async function callNvidiaApi(apiKey, payload) {
   const resp = await fetch(`${API_BASE}/chat/completions`, {
     method: "POST",
     headers: {
@@ -194,15 +194,17 @@ ${papersText}
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: prompt },
       ],
-      temperature: 0.3,
-      top_p: 0.9,
+      temperature: 1.0,
+      top_p: 0.95,
       max_tokens: MAX_TOKENS,
+      stream: false,
+      chat_template_kwargs: { enable_thinking: false },
     };
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
         console.error(`[INFO] Trying ${model} (attempt ${attempt}/${MAX_RETRIES})...`);
-        const data = await callGlmApi(apiKey, payload);
+        const data = await callNvidiaApi(apiKey, payload);
         const text = data?.choices?.[0]?.message?.content?.trim() ?? "";
         if (!text) throw new Error("Empty response from API");
 
@@ -395,7 +397,7 @@ function generateHtml(analysis) {
       <div class="header-meta">
         <span class="badge badge-date">📅 ${dateDisplay}</span>
         <span class="badge badge-count">📊 ${totalCount} 篇文獻</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
       </div>
     </div>
   </header>
@@ -434,7 +436,7 @@ function generateHtml(analysis) {
   </div>
 
   <footer>
-    <span>資料來源：PubMed &middot; 分析模型：GLM-5-Turbo</span>
+    <span>資料來源：PubMed &middot; 分析模型：${MODELS[0]}</span>
     <span><a href="https://github.com/u8901006/TMJ-disorder">GitHub</a></span>
   </footer>
 </div>
@@ -459,9 +461,9 @@ function saveSummarizedPmids(pmids) {
 }
 
 async function main() {
-  const apiKey = process.env.ZHIPU_API_KEY;
+  const apiKey = process.env.NVIDIA_API_KEY;
   if (!apiKey) {
-    console.error("[ERROR] ZHIPU_API_KEY environment variable is required");
+    console.error("[ERROR] NVIDIA_API_KEY environment variable is required");
     process.exit(1);
   }
 
