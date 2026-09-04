@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TMJ Disorder Daily &middot; 顳顎關節障礙文獻日報 &middot; 2026年9月4日</title>
+<meta name="description" content="2026年9月4日 顳顎關節障礙文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.3s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🦷</div>
+    <div class="header-text">
+      <h1>TMJ Disorder Daily &middot; 顳顎關節障礙文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年9月4日</span>
+        <span class="badge badge-count">📊 20 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日TMJ研究聚焦於數位治療的行為機制與心理因素調節效應，同時也見臨床觀察研究探討咬合模式與睡眠磨牙的關聯，以及腔顎關節置換術的長期隨訪結果。行為修正與數位療法的中介效應分析成為熱點，顯示出整合心理行為介入於TMD管理的潛力。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#1</span>
+          <span class="emoji-icon">💡</span>
+          <span class="utility-high">高實用性</span>
+        </div>
+        <h3>數位治療對顳顎關節障礙症疼痛減輕的行為修正中介效應：多中心隨機對照試驗的二次分析</h3>
+        <p class="journal-source">JMIR mHealth and uHealth &middot; Behavioral Modification as a Putative Mediator of Digital Therapeutic Response in Temporomandibular Disorders: Secondary Analysis of a Multicenter Sham-Controlled Randomized Trial.</p>
+        <p>數位治療對顳顎關節疼痛的療效約有29.1%透過行為修正（特別是口腔行為檢查表定義的惡習改變）來中介，顯示行為改變是數位療法發揮療效的關鍵機制。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">93名被診斷為顳顎關節障礙症的參與者（數位治療組n=44；安慰劑組n=49）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">數位治療介入（DTx）</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">安慰劑對照（sham DTx）</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">視覺類比疼痛分數（VAS）減少≥30%、≥50%、≥70%的響應率；行為修正透過口腔行為檢查表（OBC）測量</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">行為與心理治療</span><span class="tag">系統性回顧</span><span class="tag">隨機對照試驗</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42691400/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#2</span>
+          <span class="emoji-icon">😬</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>咬合模式與睡眠磨牙特徵的關聯：偏好單側咬合者具有較高磨牙 episode 索引與肌肉活動</h3>
+        <p class="journal-source">Sleep &amp;amp; breathing = Schlaf &amp;amp; Atmung &middot; Association between mandibular chewing patterns and sleep bruxism characteristics: a clinical observational study.</p>
+        <p>偏好單側咬合者較 bilateral alternating 咬合者具有顯著較高的睡眠磨牙 episode 索引（BEI）和峰值肌電活動，提示咬合模式可作為睡眠磨牙表型的日間預測指標。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">120名接受標準化咬合評估與一夜多導睡眠圖的成人</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">顳顎關節三維運動追蹤下的受控咬合任務</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">bilateral alternating vs. unilateral preferred-side vs. irregular/unstable 咬合模式</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">睡眠磨牙 episode 索引（BEI、episodes/hour）、峰值肌電活動（%MVC）、episode 持續時間、tonic/phasic/mixed  phenotype 分布</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">磨牙與睡眠</span><span class="tag">牙科與物理治療</span><span class="tag">臨床觀察研究</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42681265/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#3</span>
+          <span class="emoji-icon">🦷</span>
+          <span class="utility-high">高實用性</span>
+        </div>
+        <h3>Biomet 全人工顳顎關節置換術在中國患者的20年長期隨訪：技術改良後臨床與放射學結果滿意</h3>
+        <p class="journal-source">Clinical oral investigations &middot; 20-year experience of Biomet stock alloplastic temporomandibular joint replacement in Chinese patients after technical modifications: a single-center retrospective study.</p>
+        <p>經過七次手術技術改良後，Biomet 全人工顳顎關節置換術在中國患者中顯著改善最大門牙間距離（MIO由23.7mm增至34.2mm）及減輕疼痛（VAS改善63.8-76.3%），10年假體存活率達94.7%。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">300名接受Biomet股票型全人工顳顎關節置換術的中國患者（392個假體）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Biomet stock alloplastic temporomandibular joint replacement（經七次手術修改優化）</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">術前基線 vs. 術後至少12個月隨訪</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">最大門牙間距離（MIO）、視覺類比疼痛分數（VAS）、飲食功能、下顎活動度、生活品質（QoL）、假體存活率、併發症與修復率</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">手術治療</span><span class="tag">結構性TMJ疾病</span><span class="tag">影像診斷</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42687076/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#4</span>
+          <span class="emoji-icon">💉</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>顳顎關節內部 derangement 的階梯式管理：從保守治療到關節穿刺併透明質酸與12.5%葡萄糖</h3>
+        <p class="journal-source">Journal of the Korean Association of Oral and Maxillofacial Surgeons &middot; Stepwise management of temporomandibular joint internal derangement: from conservative therapy to arthrocentesis with intra-articular hyaluronic acid and 12.5% dextrose.</p>
+        <p>對保守療療效不足的顳顎關節內部 derangement 患者，關節穿刺併透明質酸與12.5%葡萄糖可有效緩解疼痛、改善口腔開度並恢復功能，顯示微創階梯策略的潛力。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">一位21歲女性，右側顳顎關節前置性疼痛、關節彈聲及間歇性鎖閉病史一年</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">8個月保守治療（物理治療、藥物治療、咬合 splint、飲食調整）後，兩次關節穿刺（首次單獨透明質酸；次次併12.5%葡萄糖）</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">保守治療單獨使用 vs. 保守治療後加關節穿刺併生物製劑</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">最大口腔開度、症狀消失、關節彈聲消失、功能恢復</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">藥物與注射治療</span><span class="tag">手術治療</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42670167/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#5</span>
+          <span class="emoji-icon">😴</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>睡眠障礙與非齒源性顏面痛的關聯：系統性文獻敘述性綜述顯示睡眠品質不佳持續降低健康相關生活品質</h3>
+        <p class="journal-source">Australian dental journal &middot; Relationship Between Sleep Disturbances and Non-Odontogenic Orofacial Pain and Its Impact on Quality of Life: A Systematic Review With Narrative Synthesis.</p>
+        <p>橫跨九項研究的敘述性綜述發現，睡眠障礙與非齒源性顏面痛（含顳顎關節障礙症、灼口症候群等）共存且持續關聯較低活力、受損日常功能、增加情緒困擾與疼痛干擾，顯著降低健康與口腔健康相關生活品質。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">患有非齒源性顏面痛的成人（包括顳顎關節障礙症、灼口症候群、創傷後顏面神經痛等）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">睡眠障礙的自我報告或經驗證量表評估</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">較佳睡眠 vs. 較差睡眠</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">健康相關生活品質（HRQoL）、口腔健康相關生活品質（OHRQoL）、活力、日常功能、情緒困擾、疼痛相關干擾</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">生活品質</span><span class="tag">系統性回顧</span><span class="tag">磨牙與睡眠</span><span class="tag">心理因素</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42669958/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#6</span>
+          <span class="emoji-icon">📱</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>數位健康介入對顳顎關節障礙症疼痛、最大口腔開度與顎部功能的影響：系統性文獻回顧</h3>
+        <p class="journal-source">Journal of oral rehabilitation &middot; Effects of Digital Health Interventions on Pain, Maximum Mouth Opening, and Jaw Function in Individuals With Temporomandibular Disorders: A Systematic Review.</p>
+        <p>六項隨機對照試驗（n=352）顯示行動應用程式與遠距復健可能改善疼痛、增加最大口腔開度並增強顎部功能，但網路行為療法尚未證實獲益，整體證據確定度甚低。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">被診斷為顳顎關節障礙症的個體</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">數位健康介入（行動應用程式、網路行為療法、遠距復健）</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組（無介入或常規療護）</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">疼痛程度、最大口腔開度（MMO）、顎部功能</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">隨機對照試驗</span><span class="tag">系統性回顧</span><span class="tag">牙科與物理治療</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42666018/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#7</span>
+          <span class="emoji-icon">📱</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>便攜電子產品使用者的頭部姿勢與顳顎關節-頸部-下顎系統功能：顳顎關節障礙症狀與肌電 asymmetrical 指標相關</h3>
+        <p class="journal-source">Journal of dentistry &middot; Head Posture and Cranio-Cervico-Mandibular Disorders in Portable Electronic Devices Users: A Comparative Cross-sectional Study.</p>
+        <p>顳顎關節障礙症狀者在中性頭位與前倾頭位下均表現出較低的肌肉對稱性（側顳肌-masseter 不平衡指數增加）與較大的扭矩指數，提示姿勢習慣可能加重肌肉不協調。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">100名平均年齡32.4歲的成人，依顳顎關節障礙症狀及頭部姿勢操作分類平均分配至四組</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">便攜電子產品使用時的頭部姿勢（中性 vs. 40°-60° 前倾頭位）</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">顳顎關節障礙症狀 vs. 無症狀；頭部姿勢操作分類</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">表面肌電活動：側顳肌活動比例（POC TA）、masseter活動比例（POC MM）、不對稱指數、活動指數、扭矩指數</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">牙科與物理治療</span><span class="tag">行為與心理治療</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42668105/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#8</span>
+          <span class="emoji-icon">🔍</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>顳顎關節內翻板移位的臨床徵象診斷價值：以磁振造影為金標準的單中心橫斷面診斷準確度研究</h3>
+        <p class="journal-source">La Clinica terapeutica &middot; Diagnostic value of clinical signs for detecting temporomandibular joint disc displacement: a single-center cross-sectional diagnostic accuracy study using magnetic resonance imaging as the reference standard.</p>
+        <p>關節疼痛為偵測顳顎關節盤移位最敏感的徵象（敏感度92.7%），但特異度低；僅嘴部受限開度具最高特異度（69.5%），顯示單一臨床徵象診斷盤移位有限，需結合多項指標。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">178名參與者（貢獻267個顳顎關節）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">標準化臨床檢查：記錄關節疼痛、關節彈聲、嘴部受限開度</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">以磁振造影確認的盤移位狀況（參考標準）</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">敏感度、特異度、陽性預測值、陰性預測值、準確度、似然比、診斷機會比</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">診斷標準DC/TMD</span><span class="tag">影像診斷</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42664135/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">💉</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>顳顎關節內部 derangement 的階梯式管理：從保守治療到關節穿刺併透明質酸與12.5%葡萄糖</h3>
+        <p class="journal-source">Journal of the Korean Association of Oral and Maxillofacial Surgeons</p>
+        <p>對保守療療效不足的顳顎關節內部 derangement 患者，關節穿刺併透明質酸與12.5%葡萄糖可有效緩解疼痛、改善口腔開度並恢復功能，顯示微創階梯策略的潛力。</p>
+        <div class="card-footer">
+          <span class="tag">藥物與注射治療</span><span class="tag">手術治療</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42670167/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">😴</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>睡眠障礙與非齒源性顏面痛的關聯：系統性文獻敘述性綜述顯示睡眠品質不佳持續降低健康相關生活品質</h3>
+        <p class="journal-source">Australian dental journal</p>
+        <p>橫跨九項研究的敘述性綜述發現，睡眠障礙與非齒源性顏面痛（含顳顎關節障礙症、灼口症候群等）共存且持續關聯較低活力、受損日常功能、增加情緒困擾與疼痛干擾，顯著降低健康與口腔健康相關生活品質。</p>
+        <div class="card-footer">
+          <span class="tag">生活品質</span><span class="tag">系統性回顧</span><span class="tag">磨牙與睡眠</span><span class="tag">心理因素</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42669958/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">📱</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>數位健康介入對顳顎關節障礙症疼痛、最大口腔開度與顎部功能的影響：系統性文獻回顧</h3>
+        <p class="journal-source">Journal of oral rehabilitation</p>
+        <p>六項隨機對照試驗（n=352）顯示行動應用程式與遠距復健可能改善疼痛、增加最大口腔開度並增強顎部功能，但網路行為療法尚未證實獲益，整體證據確定度甚低。</p>
+        <div class="card-footer">
+          <span class="tag">隨機對照試驗</span><span class="tag">系統性回顧</span><span class="tag">牙科與物理治療</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42666018/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">📱</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>便攜電子產品使用者的頭部姿勢與顳顎關節-頸部-下顎系統功能：顳顎關節障礙症狀與肌電 asymmetrical 指標相關</h3>
+        <p class="journal-source">Journal of dentistry</p>
+        <p>顳顎關節障礙症狀者在中性頭位與前倾頭位下均表現出較低的肌肉對稱性（側顳肌-masseter 不平衡指數增加）與較大的扭矩指數，提示姿勢習慣可能加重肌肉不協調。</p>
+        <div class="card-footer">
+          <span class="tag">牙科與物理治療</span><span class="tag">行為與心理治療</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42668105/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">🔍</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>顳顎關節內翻板移位的臨床徵象診斷價值：以磁振造影為金標準的單中心橫斷面診斷準確度研究</h3>
+        <p class="journal-source">La Clinica terapeutica</p>
+        <p>關節疼痛為偵測顳顎關節盤移位最敏感的徵象（敏感度92.7%），但特異度低；僅嘴部受限開度具最高特異度（69.5%），顯示單一臨床徵象診斷盤移位有限，需結合多項指標。</p>
+        <div class="card-footer">
+          <span class="tag">診斷標準DC/TMD</span><span class="tag">影像診斷</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42664135/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">🔬</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>顳顎關節症狀與男性性功能障礙亞型的關橫斷面研究：顏面痛預測所有亞型，而關節痛特別關聯於延遲射精</h3>
+        <p class="journal-source">Sao Paulo medical journal = Revista paulista de medicina</p>
+        <p>顳顎關節相關的顏面痛與下顎功能障礙可獨立預測男性性功能障礙的所有亞型（早射、延遲射精、勃起功能障礙），而顳顎關節區域疼痛特別關聯於延遲射精，提示腔顎功能可能反映更廣泛的神經肌肉調節失衡。</p>
+        <div class="card-footer">
+          <span class="tag">流行病學</span><span class="tag">心理因素</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42690330/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">📚</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>學術壓力與牙科學生顳顎關節障礙症狀的關聯：橫斷面研究顯示女性與既往診斷為顳顎關節障礙症為顯著危險因素</h3>
+        <p class="journal-source">Clinical, cosmetic and investigational dentistry</p>
+        <p>牙科學生中顳顎關節障礙症狀盛行率達56.6%，女性（AOR=1.62）與既往顳顎關節障礙症診斷（AOR=3.32）為顯著相關因素，但學術壓力與睡眠不足雖增加壓力感，未顯著增加顳顎關節障礙症風險。</p>
+        <div class="card-footer">
+          <span class="tag">心理因素</span><span class="tag">流行病學</span><span class="tag">牙科與物理治療</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42683168/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">💊</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>顳顎關節手術後慢性疼痛的問卷調查研究：超過七成患者術後持續疼痛，雙側手術與災難化思考相關</h3>
+        <p class="journal-source">Oral surgery, oral medicine, oral pathology and oral radiology</p>
+        <p>接受顳顎關節手術的患者中74.0%報告持續顳顎關節疼痛，其中77.3%微創手術組與68.0%開放手術組經歷慢性術後疼痛；雙側手術增加慢性疼痛風險（P=.03），疼痛干擾與災難化思考顯著升高。</p>
+        <div class="card-footer">
+          <span class="tag">手術治療</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42285848/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">🏥</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>顳顎關節強直性管理：從氣道考量到骨切除與重建的結構性療法綜述</h3>
+        <p class="journal-source">Atlas of the oral and maxillofacial surgery clinics of North America</p>
+        <p>顳顎關節強直是致残性疾病，需透過詳細影像規劃手術，以骨切除為基礎，再以成骨移植、 distraction osteogenesis 或全人工關節置換重建以恢復下顎高度與功能。</p>
+        <div class="card-footer">
+          <span class="tag">手術治療</span><span class="tag">結構性TMJ疾病</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42567620/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">📊</span>
+          <span class="utility-high utility-sm">高</span>
+        </div>
+        <h3>疼痛性顳顎關節障礙症的共病與相關因素：基於BigMouth牙科資料庫的大數據分析顯示頭痛、抑鬱與睡眠呼吸暫停顯著增加風險</h3>
+        <p class="journal-source">Pain reports</p>
+        <p>疼痛性顳顎關節障礙症患者較非疼痛組有顯著更高的頭痛（PR=2.41）、抑鬱（PR=1.91）、焦慮（PR=1.37）、睡眠呼吸暫停（PR=1.95）與胃腸問題（PR=1.67），每增加一項共病就使疼痛性顳顎關節障礙症 odds 增加2.67倍，凸顯整合醫療與牙科照護的必要性。</p>
+        <div class="card-footer">
+          <span class="tag">心理因素</span><span class="tag">流行病學</span><span class="tag">系統性回顧</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42565178/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">💊</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>低劑量環苯扎林對睡眠磨牙相關肌電活動無效：隨機交叉雙盲安慰劑對照臨床試驗</h3>
+        <p class="journal-source">Journal of sleep research</p>
+        <p>每晚5毫克環苯扎林連續三晚未顯著改變睡眠磨牙相關的咬肌電活動或最大咬合力，顯示低劑量此藥物在修改睡眠磨牙肌肉活動方面臨床實用性有限。</p>
+        <div class="card-footer">
+          <span class="tag">藥物與注射治療</span><span class="tag">隨機對照試驗</span><span class="tag">磨牙與睡眠</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42666102/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">📋</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>牙科病患回報結果（dPROs）在牙周病學隨機對照試驗中的報告狀況：2023-2025年期間研究顯示報告頻率低且與影響因素及追蹤時長相關</h3>
+        <p class="journal-source">The journal of evidence-based dental practice</p>
+        <p>在牙周病學領域的175項隨機對照試驗中，僅30.3%報告至少一項牙科病患回報結果（dPROs），最常見為面部疼痛、不適與口腔健康相關生活品質，報告傾向於高影響因子期刊與較長追蹤研究。</p>
+        <div class="card-footer">
+          <span class="tag">隨機對照試驗</span><span class="tag">生活品質</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42556904/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+        <span class="topic-name">疼痛機制與神經科學</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+        <span class="topic-count">1</span>
+      </div><div class="topic-row">
+        <span class="topic-name">心理因素</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:80%"></div></div>
+        <span class="topic-count">4</span>
+      </div><div class="topic-row">
+        <span class="topic-name">行為與心理治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">磨牙與睡眠</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">結構性TMJ疾病</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+        <span class="topic-count">2</span>
+      </div><div class="topic-row">
+        <span class="topic-name">牙科與物理治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">藥物與注射治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+        <span class="topic-count">2</span>
+      </div><div class="topic-row">
+        <span class="topic-name">手術治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">影像診斷</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+        <span class="topic-count">2</span>
+      </div><div class="topic-row">
+        <span class="topic-name">生活品質</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+        <span class="topic-count">5</span>
+      </div><div class="topic-row">
+        <span class="topic-name">診斷標準DC/TMD</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+        <span class="topic-count">1</span>
+      </div><div class="topic-row">
+        <span class="topic-name">流行病學</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">系統性回顧</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:80%"></div></div>
+        <span class="topic-count">4</span>
+      </div><div class="topic-row">
+        <span class="topic-name">隨機對照試驗</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:80%"></div></div>
+        <span class="topic-count">4</span>
+      </div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">數位治療</span><span class="keyword">行為修正</span><span class="keyword">睡眠磨牙</span><span class="keyword">顳顎關節置換術</span><span class="keyword">生活品質</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank" rel="noopener">
+        <span class="clinic-icon">🏥</span>
+        <span class="clinic-name">李政洋身心診所首頁</span>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank" rel="noopener">
+        <span class="clinic-icon">📬</span>
+        <span class="clinic-name">訂閱電子報<span class="clinic-desc"> &middot; 最新身心醫學資訊</span></span>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://buymeacoffee.com/CYlee" class="clinic-link" target="_blank" rel="noopener">
+        <span class="clinic-icon">☕</span>
+        <span class="clinic-name">Buy Me a Coffee<span class="clinic-desc"> &middot; 支持本研究計畫</span></span>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/TMJ-disorder">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
