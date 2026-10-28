@@ -7,7 +7,7 @@ const ROOT = resolve(__dirname, "..");
 const DOCS = resolve(ROOT, "docs");
 
 const API_BASE = "https://integrate.api.nvidia.com/v1";
-const MODELS = ["nvidia/nemotron-3-super-120b-a12b", "nvidia/nemotron-3-nano-30b-a3b"];
+const MODELS = (process.env.NVIDIA_MODELS || "moonshotai/kimi-k2-thinking,moonshotai/kimi-k2-instruct").split(",").map(s => s.trim()).filter(Boolean);
 const MAX_TOKENS = 16384;
 const TIMEOUT_MS = 480_000;
 const MAX_RETRIES = 3;
