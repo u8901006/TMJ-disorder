@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TMJ Disorder Daily &middot; 顳顎關節障礙文獻日報 &middot; 2026年11月21日</title>
+<meta name="description" content="2026年11月21日 顳顎關節障礙文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.3s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🦷</div>
+    <div class="header-text">
+      <h1>TMJ Disorder Daily &middot; 顳顎關節障礙文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年11月21日</span>
+        <span class="badge badge-count">📊 15 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">本日研究聚焦於三大方向：1) 針對 TMJ 早期介入與藥物療效的長效觀察（如 dex ＋ lid 注射），2) 年齡與心理因素對 TMD 症狀負擔的多域 phenotyping 調查（特別是年輕成人），以及 3) 新型診斷分類系統（如 Sivan TMJ-OPMS）的臨床驗證。其中最突出趨勢為「基於負擔的分型」與「生物光照合成療法」的整合應用，顯示出從單純症狀治療轉向個體化、機制導向之臨床路徑。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#1</span>
+          <span class="emoji-icon">💉</span>
+          <span class="utility-high">高實用性</span>
+        </div>
+        <h3>Longitudinal Clinical Outcomes After Intra-Articular Dexamethasone-Lidocaine Injection for Temporomandibular Joint Arthralgia.</h3>
+        <p class="journal-source">Journal of oral rehabilitation &middot; Longitudinal Clinical Outcomes After Intra-Articular Dexamethasone-Lidocaine Injection for Temporomandibular Joint Arthralgia.</p>
+        <p>Retrospective研究顯示，dexamethasone-lidocaine注射在TMJ疼痛與疼痛負擔上顯著降低，但MMO無顯著變化，隨訪期77天；中重度痛患者獲益大於輕度組，支持其作為緩解疼痛之微創選項。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">191例TMJ疼痛患者（平均年齡45.5年，67.5%女性）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">髓質內皮質腎素-利多卡因關節內注射</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未見明確對照組，屬觀察性研究</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">VAS、CMO、MMO、疼痛負擔變化隨時間呈負向趨勢，中重度組減幅顯著優於輕度組</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">疼痛機制與神經科學</span><span class="tag">藥物與注射治療</span><span class="tag">臨床實證</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43065131/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#2</span>
+          <span class="emoji-icon">🧠</span>
+          <span class="utility-high">高實用性</span>
+        </div>
+        <h3>From Symptoms to Burden: Multidomain Phenotyping of Temporomandibular Disorders in Young Adults.</h3>
+        <p class="journal-source">Journal of oral rehabilitation &middot; From Symptoms to Burden: Multidomain Phenotyping of Temporomandibular Disorders in Young Adults.</p>
+        <p>跨域phenotyping研究證實，結合痛症（PT）、關節（IT）與雙重症狀（CT）之青年TMD患者，CT群體負擔最高，痛症與心理/睡眠/口腔健康相關性顯著，支撐多模式介入之需求。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">540名19-24歲大學生</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">多模態TMD負擔評估（問卷、生理測定）</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">有無TMD症狀比較</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">CT群體在躯體、心理及口腔健康相關生活品質上負擔最重，痛症負擔與心理 distress 中等相關（rs=0.475）</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">心理因素</span><span class="tag">流行病學</span><span class="tag">診斷標準DC/TMD</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43062093/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#3</span>
+          <span class="emoji-icon">🖼️</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>Sivan TMJ-OPMS classification based on dual-mode rendering three-dimensional cone-beam computed tomography technique for the diagnosis of temporomandibular joint disorders.</h3>
+        <p class="journal-source">International journal of oral and maxillofacial surgery &middot; Sivan TMJ-OPMS classification based on dual-mode rendering three-dimensional cone-beam computed tomography technique for the diagnosis of temporomandibular joint disorders.</p>
+        <p>提出Sivan TMJ-OPMS分類系統，透過CBCT雙模3D重建整合骨質、板狀、板狀形態與關節腔，信度近完美（kappa 0.88-0.94），與MRI診斷強相關，提供標準化分型框架。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">132位患者（264個關節）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">三維CBCT雙模重建與OPMS分類</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">MRI作為金標準參考</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">分類信度與外部可重複性優異，AUC=0.94，支撐個體化評估與嚴重程度分層。</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">影像診斷</span><span class="tag">診斷標準DC/TMD</span><span class="tag">結構性TMJ疾病</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43057924/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#4</span>
+          <span class="emoji-icon">🦷</span>
+          <span class="utility-high">高實用性</span>
+        </div>
+        <h3>Effectiveness of digitally fabricated versus conventional stabilizing splints in temporomandibular disorders: a randomized controlled trial protocol.</h3>
+        <p class="journal-source">BDJ open &middot; Effectiveness of digitally fabricated versus conventional stabilizing splints in temporomandibular disorders: a randomized controlled trial protocol.</p>
+        <p>設計中之RCT比較數位與傳統固定裝置在TMD治療之效果，主要評估3個月內痛強變化（CPI 0-100），結果將直接影響數位牙科在TMD領域之適用性判斷。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">18-40歲TMJ疼痛患者120例</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">數位固定裝置 vs 傳統熱固化亞克力固定裝置</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">數位vs傳統製作技術</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">主要結論待產出，預期將比較臨床效果、合併症與依從性差異。</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">牙科與物理治療</span><span class="tag">隨機對照試驗</span><span class="tag">臨床實用性</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43039906/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#5</span>
+          <span class="emoji-icon">⚠️</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>Persistent Mastication-Triggered Pain After Anterior Maxillary Implant Placement Associated With an Adjacent Canal-Like Anatomical Structure: A Case Report.</h3>
+        <p class="journal-source">Clinical case reports &middot; Persistent Mastication-Triggered Pain After Anterior Maxillary Implant Placement Associated With an Adjacent Canal-Like Anatomical Structure: A Case Report.</p>
+        <p>個案報告描述植入體後持續進食誘發之電擊樣疼痛，CBCT發現近植入體管狀結構，提示其可能為病理性痛源，提醒植入手術時需謹慎評估解剖變異。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">1例34歲男性植入體患者</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">未見明確介入，屬病例描述</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">N/A</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">疼痛持續12個月，與植入體相鄰之管狀結構可能相關，但因果關係未確定</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">結構性TMJ疾病</span><span class="tag">牙科與物理治療</span><span class="tag">案例分析</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43061678/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#6</span>
+          <span class="emoji-icon">☕</span>
+          <span class="utility-mid">中實用性</span>
+        </div>
+        <h3>Association Between Lifestyle Habits, Anxiety Levels, and Bruxism-Related Signs in Undiagnosed Adults.</h3>
+        <p class="journal-source">Oral health &amp; preventive dentistry &middot; Association Between Lifestyle Habits, Anxiety Levels, and Bruxism-Related Signs in Undiagnosed Adults.</p>
+        <p>調查無診斷成人之生活習慣、焦慮與磨牙相關徵象，吸煙與年齡與磨牙磨耗顯著相關，咖啡攝取與壓力頭痛關聯在調整後仍顯著，提示生活介入之重要性。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">188名18-60歲常規就訪成人</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">生活習慣與焦慮因子分析</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">調整年齡、性別、吸煙、酒精、咖啡等變項後之多變項迴歸</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">吸煙與老齒是磨牙磨耗獨立預測因子；咖啡攝取與壓力頭痛關聯在調整後持續存在</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">心理因素</span><span class="tag">磨牙與睡眠</span><span class="tag">生活方式</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43059044/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div><div class="news-card featured">
+        <div class="card-header">
+          <span class="rank-badge">#7</span>
+          <span class="emoji-icon">🔬</span>
+          <span class="utility-low">低實用性</span>
+        </div>
+        <h3>Regulated cell death in the temporomandibular joint: From disc internal derangement to osteoarthritis and tissue repair.</h3>
+        <p class="journal-source">Archives of oral biology &middot; Regulated cell death in the temporomandibular joint: From disc internal derangement to osteoarthritis and tissue repair.</p>
+        <p>敘述性綜述論述TMJ內從disc內弛變到骨關節炎之調控細胞死亡機制（凋亡、壞死型細胞死亡、泛細胞死亡），提出PANoptosis模型，對未來之分子治療提供理論框架。</p>
+        <div class="pico-grid">
+            <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">TMJ組織（討論層面，非特定臨床樣本）</span></div>
+            <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">文獻綜述與機制探討</span></div>
+            <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">人體TMJ組織優先於動物模型</span></div>
+            <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">整合 apoptosis, necroptosis, pyroptosis, ferroptosis 與 autophagy、senescence 之跨機制視角，提出通路特異性治療目標。</span></div>
+          </div>
+        <div class="card-footer">
+          <span class="tag">疼痛機制與神經科學</span><span class="tag">系統性回顧</span><span class="tag">研究趨勢</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42914586/" target="_blank" rel="noopener">閱讀原文 →</a>
+        </div>
+      </div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">❌</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>Retraction: Effectiveness of Occlusal Splints in the Management of Temporomandibular Disorders: Comparisons of Treatment Approaches and Digital Versus Conventional Fabrication Techniques.</h3>
+        <p class="journal-source">Cureus</p>
+        <p>本文已被正式 retract，實質無實質臨床資訊可供引用。</p>
+        <div class="card-footer">
+          <span class="tag">牙科與物理治療</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43054586/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">💻</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>Process and interface engineering of 2D TMDs for CMOS integration.</h3>
+        <p class="journal-source">Nano convergence</p>
+        <p>此文關於二維遷移金屬二硫化物在CMOS製程中的工程整合，與TMJ臨床無直接關聯。</p>
+        <div class="card-footer">
+          <span class="tag">關鍵字1</span><span class="tag">關鍵字2</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43050072/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">🧪</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>Effect of photobiomodulation and botulinum toxin type a on temporomandibular joint monoarthritis: an in vivo study.</h3>
+        <p class="journal-source">Lasers in medical science</p>
+        <p>實驗性研究顯示PBM聯合BTX-A在大鼠TMJ單關節關節炎模型中顯示優於單一療法，組織重構效果顯著，支持聯合療法之潛力。</p>
+        <div class="card-footer">
+          <span class="tag">疼痛機制與神經科學</span><span class="tag">藥物與注射治療</span><span class="tag">光生物調節</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43049837/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">👶</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>Dual-wavelength superpulsed photobiomodulation in children and adolescents with orofacial pain: clinical, thermal, and optical transmission outcomes in a pilot study.</h3>
+        <p class="journal-source">Lasers in medical science</p>
+        <p>小探討研究顯示四週PBM干預後疼痛值有降低趨勢，但研究設計無對照組，結果僅作為未來受控試驗之參考，無法證實臨床有效性。</p>
+        <div class="card-footer">
+          <span class="tag">疼痛機制與神經科學</span><span class="tag">光生物調節</span><span class="tag">年齡相關</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43043553/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">📊</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>Occlusal Macrowear Patterns and Initial Tooth Contacts in Patients With Temporomandibular Disorders and Asymptomatic Controls.</h3>
+        <p class="journal-source">Journal of oral rehabilitation</p>
+        <p>研究發現TMD患者最大頜前牙磨損顯著多於對照組，且58%患者於緩和位有前牙初接觸，僅14%對照組有此現象，提示磨損模式可能反映肌肉力線與下顎位置。</p>
+        <div class="card-footer">
+          <span class="tag">牙科與物理治療</span><span class="tag">結構性TMJ疾病</span><span class="tag">診斷標準DC/TMD</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43040397/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">🔪</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>Clinical and functional outcomes following transoral endoscopically-assisted treatment of mandibular subcondylar fractures: A single-center experience.</h3>
+        <p class="journal-source">Journal of cranio-maxillo-facial surgery</p>
+        <p>經口內鏡輔助下顎下骨冠骨折治療之單中心經驗，43.8%例有術後併發症，2.8%需複歸手術，長期TMJ功能評估是次要終點。</p>
+        <div class="card-footer">
+          <span class="tag">手術治療</span><span class="tag">結構性TMJ疾病</span><span class="tag">流行病學</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42981908/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">💊</span>
+          <span class="utility-mid utility-sm">中</span>
+        </div>
+        <h3>A clinical algorithm for painful TMD associated with sleep bruxism: the role of botulinum toxins.</h3>
+        <p class="journal-source">Oral surgery, oral medicine, oral pathology and oral radiology</p>
+        <p>審文綜討TMD與睡眠磨牙關聯仍不明確，建議培毒劑作為複雜持續症例之最後手段，結合口腔擺具、物理治療與行為治療。</p>
+        <div class="card-footer">
+          <span class="tag">心理因素</span><span class="tag">磨牙與睡眠</span><span class="tag">藥物與注射治療</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42823229/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div><div class="news-card">
+        <div class="card-header-row">
+          <span class="emoji-sm">🔬</span>
+          <span class="utility-low utility-sm">低</span>
+        </div>
+        <h3>Boosting SHG of 3R-TMD thin-film/metasurface heterostructures by interfacial harmonic-plasmon resonance.</h3>
+        <p class="journal-source">Optics express</p>
+        <p>此文涉及非線性光學與納米材料製程，與TMJ臨床醫學無直接關聯。</p>
+        <div class="card-footer">
+          <span class="tag">關鍵字1</span><span class="tag">關鍵字2</span>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/43040716/" target="_blank" rel="noopener">PubMed →</a>
+        </div>
+      </div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+        <span class="topic-name">疼痛機制與神經科學</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+        <span class="topic-count">14</span>
+      </div><div class="topic-row">
+        <span class="topic-name">心理因素</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:79%"></div></div>
+        <span class="topic-count">11</span>
+      </div><div class="topic-row">
+        <span class="topic-name">結構性TMJ疾病</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:71%"></div></div>
+        <span class="topic-count">10</span>
+      </div><div class="topic-row">
+        <span class="topic-name">牙科與物理治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:64%"></div></div>
+        <span class="topic-count">9</span>
+      </div><div class="topic-row">
+        <span class="topic-name">藥物與注射治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+        <span class="topic-count">7</span>
+      </div><div class="topic-row">
+        <span class="topic-name">影像診斷</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:43%"></div></div>
+        <span class="topic-count">6</span>
+      </div><div class="topic-row">
+        <span class="topic-name">流行病學</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:36%"></div></div>
+        <span class="topic-count">5</span>
+      </div><div class="topic-row">
+        <span class="topic-name">診斷標準DC/TMD</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:36%"></div></div>
+        <span class="topic-count">5</span>
+      </div><div class="topic-row">
+        <span class="topic-name">系統性回顧</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:29%"></div></div>
+        <span class="topic-count">4</span>
+      </div><div class="topic-row">
+        <span class="topic-name">隨機對照試驗</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:21%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">生活品質</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:21%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">磨牙與睡眠</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:21%"></div></div>
+        <span class="topic-count">3</span>
+      </div><div class="topic-row">
+        <span class="topic-name">頭痛與偏頭痛</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+        <span class="topic-count">2</span>
+      </div><div class="topic-row">
+        <span class="topic-name">手術治療</span>
+        <div class="topic-bar-bg"><div class="topic-bar" style="width:14%"></div></div>
+        <span class="topic-count">2</span>
+      </div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">temporomandibular joint</span><span class="keyword">TMD</span><span class="keyword">pain management</span><span class="keyword">diagnosis</span><span class="keyword">therapy</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank" rel="noopener">
+        <span class="clinic-icon">🏥</span>
+        <span class="clinic-name">李政洋身心診所首頁</span>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank" rel="noopener">
+        <span class="clinic-icon">📬</span>
+        <span class="clinic-name">訂閱電子報<span class="clinic-desc"> &middot; 最新身心醫學資訊</span></span>
+        <span class="clinic-arrow">→</span>
+      </a>
+      <a href="https://buymeacoffee.com/CYlee" class="clinic-link" target="_blank" rel="noopener">
+        <span class="clinic-icon">☕</span>
+        <span class="clinic-name">Buy Me a Coffee<span class="clinic-desc"> &middot; 支持本研究計畫</span></span>
+        <span class="clinic-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3.5-lightning-30b-a3b</span>
+    <span><a href="https://github.com/u8901006/TMJ-disorder">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
